@@ -1,0 +1,16 @@
+# Git
+.git/
+
+# Django
+__pycache__/
+db.sqlite3
+media/
+
+# Environment
+.venv
+
+# PyCharm
+.idea/
+
+# VisualStudioCode
+.vscode/
