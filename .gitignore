@@ -14,3 +14,7 @@ media/
 
 # VisualStudioCode
 .vscode/
+
+# Logs
+logs/
+*.log

@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # 3rd-party apps
+    'django_crontab',
     # Local apps
     'my_brawl_stats',
 ]
@@ -125,3 +126,13 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# django-cron config
+#   $ python manage.py crontab add
+#   $ python manage.py crontab remove
+CRONJOBS = [
+    # BrawlStarAPI call to update stats every day at 8:00 AM
+    #('0 8 * * *', 'my_brawl_stats.cron.fetch_from_api_cron', f'>> {BASE_DIR}/logs/cron_jobs.log'),
+    # dev cron
+    ('*/10 * * * *', 'my_brawl_stats.cron.fetch_from_api_cron', f'>> {BASE_DIR}/logs/cron_jobs.log'),
+]
