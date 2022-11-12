@@ -1,0 +1,64 @@
+{% extends 'my_brawl_stats/base_layout.html' %}
+
+{% block page_content %}
+
+<!-- start: config nav-tabs -->
+<div class="ms-4">
+  <ul class="nav nav-tabs profile-navbar" id="config-tab" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active" id="config-user-tab" data-bs-toggle="tab" role="tab" data-bs-target="#config-user-pane"
+        aria-controls="config-user-pane" aria-selected="true">
+        <i class="ti-user me-2"></i>
+        User
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="config-password-tab" data-bs-toggle="tab" role="tab"
+        data-bs-target="#config-password-pane" aria-controls="config-password-pane" aria-selected="false">
+        <i class="ti-lock me-2"></i>
+        Password
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="config-apikey-tab" data-bs-toggle="tab" role="tab" data-bs-target="#config-apikey-pane"
+        aria-controls="config-apikey-pane" aria-selected="false">
+        <i class="ti-key me-2"></i>
+        API Key
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="config-activity-tab" data-bs-toggle="tab" role="tab"
+        data-bs-target="#config-activity-pane" aria-controls="config-activity-pane" aria-selected="false">
+        <i class="ti-calendar me-2"></i>
+        Activity
+      </a>
+    </li>
+  </ul>
+</div>
+<!-- end: config nav-tabs -->
+<!-- start: config card tab-content -->
+<div class="card">
+  <div class="card-body">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="tab-content border-0">
+          <!-- start: user tab-pane -->
+          {% include "my_brawl_stats/page_settings_user_tab_pane.html" %}
+          <!-- end: user tab-pane -->
+          <!-- start: password tab-pane -->
+          {% include "my_brawl_stats/page_settings_pwd_tab_pane.html" %}
+
+          <!-- end: password tab-pane -->
+          <!-- start: apikey tab-pane -->
+          {% include "my_brawl_stats/page_settings_token_tab_pane.html" %}
+          <!-- end: apikey tab-pane -->
+          <!-- start: activity tab-pane -->
+          {% include "my_brawl_stats/page_settings_activity_tab_pane.html" %}
+          <!-- end: activity tab-pane -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end: config card tab-content -->
+{% endblock %}

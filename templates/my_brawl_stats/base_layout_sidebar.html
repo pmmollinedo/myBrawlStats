@@ -1,0 +1,39 @@
+<nav class="sidebar sidebar-offcanvas" id="sidebar">
+  <ul class="nav">
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'my_brawl_stats:home' %}">
+        <i class="menu-icon mdi mdi-chart-areaspline"></i>
+        <span class="menu-title">My Brawl Stats</span>
+      </a>
+    </li>
+    <li class="nav-item nav-category">Configuration</li>
+    <li class="nav-item">
+      <a class="nav-link" data-bs-toggle="collapse" href="#nav-settings" aria-expanded="false"
+        aria-controls="nav-settings">
+        <i class="menu-icon mdi mdi-settings"></i>
+        <span class="menu-title">Settings</span>
+        <i class="menu-arrow"></i>
+      </a>
+      <div class="collapse" id="nav-settings">
+        <ul class="nav flex-column sub-menu">
+          <li class="nav-item"> <a class="nav-link" href="{% url 'my_brawl_stats:settings' %}">User</a></li>
+          <li class="nav-item"> <a class="nav-link" href="{% url 'my_brawl_stats:settings' %}">Change Password</a></li>
+          <li class="nav-item"> <a class="nav-link" href="{% url 'my_brawl_stats:settings' %}">BrawlStars Token</a></li>
+          <li class="nav-item"> <a class="nav-link" href="{% url 'my_brawl_stats:settings' %}">Activity</a></li>
+        </ul>
+      </div>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-bs-toggle="collapse" href="#nav-user" aria-expanded="false" aria-controls="nav-user">
+        <i class="menu-icon mdi mdi-account"></i>
+        <span class="menu-title">User</span>
+        <i class="menu-arrow"></i>
+      </a>
+      <div class="collapse" id="nav-user">
+        <ul class="nav flex-column sub-menu">
+          <li class="nav-item"> <a class="nav-link" href="">Log out</a></li>
+        </ul>
+      </div>
+    </li>
+  </ul>
+</nav>

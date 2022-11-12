@@ -1,0 +1,246 @@
+{% extends 'my_brawl_stats/base_layout.html' %}
+
+{% load static %}
+
+{% block page_content %}
+
+<!-- START: top menu -->
+<div class="d-sm-flex align-items-center justify-content-between border-bottom">
+  <div class="ms-2">
+    <h1 class="display-4">My Brawl Stats</h1>
+  </div>
+  <div>
+    <div class="btn-wrapper">
+      <button type="button" class="btn btn-primary btn-icon-text text-white mb-0" data-bs-toggle="modal"
+        data-bs-target="#manualStatsUpdateModal">
+        <i class="ti-reload btn-icon-prepend"></i>
+        Update
+      </button>
+    </div>
+    <div class="modal fade" id="manualStatsUpdateModal" aria-labelledby="manualStatsUpdateModalLabel"
+      style="display: none;" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="manualStatsUpdateModalLabel">Manual update</h5>
+            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>Are you sure you want to update your player info and brawlers stats?</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary text-white">Yes</button>
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">No</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END: top menu -->
+<!-- START: myContent -->
+<div class="tab-content tab-content-basic">
+  <div class="tab-pane fade show active" id="overview" role="tabpanel" aria-labelledby="overview">
+    <!-- START: PlayerInfo -->
+    <div class="row justify-content-center">
+      <div class="col-md-8 grid-margin grid-margin-md-0 stretch-card">
+        <div class="card">
+          <div class="card-body text-center">
+            <div>
+              <img src="{% static 'images/faces/face5.jpg' %}" class="img-lg mb-2" alt="profile image">
+              <h4>USERNAME</h4>
+              <p class="text-muted mb-0">#XXXXXXXX</p>
+            </div>
+            <div class="row mt-2 justify-content-center">
+              <div class="col-sm-4 text-end">
+                <div class="progress progress-lg mt-2">
+                  <div class="progress-bar bg-primary" role="progressbar" style="width: 85%" aria-valuenow="25"
+                    aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+              <div class="col-sm-4 text-start">
+                <div class="progress progress-lg mt-2">
+                  <div class="progress-bar bg-warning" role="progressbar" style="width: 85%" aria-valuenow="25"
+                    aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+            </div>
+            <div class="border-top pt-3 mt-3">
+              <div class="row justify-content-center">
+                <div class="col-2">
+                  <p>Trophies</p>
+                  <h6>23567</h6>
+                </div>
+                <div class="col-2">
+                  <p>Highest Trophies</p>
+                  <h6>25987</h6>
+                </div>
+              </div>
+              <div class="row justify-content-center">
+                <div class="col-2">
+                  <p>Solo Victories</p>
+                  <h6>982</h6>
+                </div>
+                <div class="col-2">
+                  <p>Duo Victories</p>
+                  <h6>449</h6>
+                </div>
+                <div class="col-2">
+                  <p>3vs3 Victories</p>
+                  <h6>3636</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END: PlayerInfo row mt-4-->
+    <div class="row mt-4">
+      <div class="row justify-content-center">
+        <div class="col-3">
+          <div class="card" href="{% url 'my_brawl_stats:brawler' 1%}">
+            <div class="card-body text-center">
+              <div>
+                <img src="{% static 'images/faces/face11.jpg' %}" class="img-lg mb-2" alt="profile image">
+                <h4>BRAWLER_NAME</h4>
+              </div>
+              <div class="row mt-2 justify-content-center">
+                <div class="col-sm-4 text-start">
+                  <p>Fuerza: 9</p>
+                </div>
+                <div class="col-sm-4 text-end">
+                  <p>Rango: 22</p>
+                </div>
+              </div>
+              <div class="border-top pt-3 mt-3">
+                <div class="row justify-content-center">
+                  <div class="col-2">
+                    <i class="mdi mdi-adjust"></i>
+                  </div>
+                  <div class="col-2">
+                    <i class="mdi mdi-adjust"></i>
+                  </div>
+                  <div class="col-2">
+                    <i class="mdi mdi-album"></i>
+                  </div>
+                  <div class="col-2">
+                    <i class="mdi mdi-album"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="card">
+            <div class="card-body text-center">
+              <div>
+                <img src="{% static 'images/faces/face11.jpg' %}" class="img-lg mb-2" alt="profile image">
+                <h4>BRAWLER_NAME</h4>
+              </div>
+              <div class="row mt-2 justify-content-center">
+                <div class="col-sm-4 text-start">
+                  <p>Fuerza: 9</p>
+                </div>
+                <div class="col-sm-4 text-end">
+                  <p>Rango: 22</p>
+                </div>
+              </div>
+              <div class="border-top pt-3 mt-3">
+                <div class="row justify-content-center">
+                  <div class="col-2">
+                    <i class="mdi mdi-adjust"></i>
+                  </div>
+                  <div class="col-2">
+                    <i class="mdi mdi-adjust"></i>
+                  </div>
+                  <div class="col-2">
+                    <i class="mdi mdi-album"></i>
+                  </div>
+                  <div class="col-2">
+                    <i class="mdi mdi-album"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="card">
+            <div class="card-body text-center">
+              <div>
+                <img src="{% static 'images/faces/face11.jpg' %}" class="img-lg mb-2" alt="profile image">
+                <h4>BRAWLER_NAME</h4>
+              </div>
+              <div class="row mt-2 justify-content-center">
+                <div class="col-sm-4 text-start">
+                  <p>Fuerza: 9</p>
+                </div>
+                <div class="col-sm-4 text-end">
+                  <p>Rango: 22</p>
+                </div>
+              </div>
+              <div class="border-top pt-3 mt-3">
+                <div class="row justify-content-center">
+                  <div class="col-2">
+                    <i class="mdi mdi-adjust"></i>
+                  </div>
+                  <div class="col-2">
+                    <i class="mdi mdi-adjust"></i>
+                  </div>
+                  <div class="col-2">
+                    <i class="mdi mdi-album"></i>
+                  </div>
+                  <div class="col-2">
+                    <i class="mdi mdi-album"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="card">
+            <div class="card-body text-center">
+              <div>
+                <img src="{% static 'images/faces/face11.jpg' %}" class="img-lg mb-2" alt="profile image">
+                <h4>BRAWLER_NAME</h4>
+              </div>
+              <div class="row mt-2 justify-content-center">
+                <div class="col-sm-4 text-start">
+                  <p>Fuerza: 9</p>
+                </div>
+                <div class="col-sm-4 text-end">
+                  <p>Rango: 22</p>
+                </div>
+              </div>
+              <div class="border-top pt-3 mt-3">
+                <div class="row justify-content-center">
+                  <div class="col-2">
+                    <i class="mdi mdi-adjust"></i>
+                  </div>
+                  <div class="col-2">
+                    <i class="mdi mdi-adjust"></i>
+                  </div>
+                  <div class="col-2">
+                    <i class="mdi mdi-album"></i>
+                  </div>
+                  <div class="col-2">
+                    <i class="mdi mdi-album"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- END: myContent -->
+</div>
+
+
+{% endblock %}

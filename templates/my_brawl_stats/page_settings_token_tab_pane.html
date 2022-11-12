@@ -1,0 +1,25 @@
+<div class="tab-pane fade" id="config-apikey-pane">
+  <h4 class="card-title">BrawlStars API Key</h4>
+  <div class="alert alert-dark" role="alert">
+    <h5 class="alert-heading"><i class="ti-info-alt"></i>Important information.</h5>
+    <hr>
+    <p>You need to create an authentication token at <a href="https://developer.brawlstars.com/" class="alert-link"
+        target="_blank">Brawl Stars developer</a> website.</p>
+    <p>As you may probably have a dynamic public IP address, you need to create a new one from
+      time to time.</p>
+  </div>
+  <form class="row justify-content-center">
+    <div class="col-10 form-group">
+      <label for="config-apikey-form-input-ip" class="form-label">Allowed IP</label>
+      <input type="text" class="form-control" id="config-apikey-form-input-ip" placeholder="192.168.0.1">
+    </div>
+    <div class="col-10 form-group">
+      <label for="config-apikey-form-input-token" class="form-label">Token</label>
+      <textarea class="form-control h-auto" id="config-apikey-form-input-token"
+        placeholder="Insert your Brawl Stars Token here..." rows="10"></textarea>
+    </div>
+    <div class="col-10 form-group text-end">
+      <button type="submit" class="btn btn-primary">Save</button>
+    </div>
+  </form>
+</div>

@@ -1,4 +1,5 @@
 from django.http import JsonResponse
+from django.shortcuts import render
 
 from my_brawl_stats.services import BrawlStarsApiException
 
@@ -6,7 +7,21 @@ from .helpers import fetch_from_api
 
 
 def home(request):
-    return JsonResponse(data={'message': "Welcome to the app."})
+    template = 'my_brawl_stats/page_home.html'
+    context = {}
+    return render(request, template, context)
+
+
+def brawler(request, brawlerId):
+    template = 'my_brawl_stats/page_stats.html'
+    context = {}
+    return render(request, template, context)
+
+
+def settings(request):
+    template = 'my_brawl_stats/page_settings.html'
+    context = {}
+    return render(request, template, context)
 
 
 def api(request):

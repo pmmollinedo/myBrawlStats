@@ -1,0 +1,61 @@
+{% extends 'my_brawl_stats/base.html' %}
+
+{% block base_layout %}
+
+<div class="container-scroller">
+
+  <!-- start: Topbar -->
+  {% include 'my_brawl_stats/base_layout_topbar.html' %}
+  <!-- end: Topbar -->
+
+  <div class="container-fluid page-body-wrapper">
+
+    <!-- start: settings float button -->
+    <div class="theme-setting-wrapper">
+      <div id="settings-trigger"><i class="ti-settings"></i></div>
+      <div id="theme-settings" class="settings-panel">
+        <i class="settings-close ti-close"></i>
+        <p class="settings-heading">SIDEBAR SKINS</p>
+        <div class="sidebar-bg-options selected" id="sidebar-light-theme">
+          <div class="img-ss rounded-circle bg-light border me-3"></div>Light
+        </div>
+        <div class="sidebar-bg-options" id="sidebar-dark-theme">
+          <div class="img-ss rounded-circle bg-dark border me-3"></div>Dark
+        </div>
+        <p class="settings-heading mt-2">HEADER SKINS</p>
+        <div class="color-tiles mx-0 px-4">
+          <div class="tiles success"></div>
+          <div class="tiles warning"></div>
+          <div class="tiles danger"></div>
+          <div class="tiles info"></div>
+          <div class="tiles dark"></div>
+          <div class="tiles default"></div>
+        </div>
+      </div>
+    </div>
+    <!-- end: settings float button -->
+
+    <!-- start: Sidebar -->
+    {% include "my_brawl_stats/base_layout_sidebar.html" %}
+    <!-- end: Sidebar -->
+
+    <div class="main-panel">
+      <div class="content-wrapper">
+        <div class="row justify-content-center">
+          <div class="col-sm-10">
+            <div class="home-tab">
+              <!-- start: page content -->
+              {% block page_content %}
+              {% endblock %}
+              <!-- end: page content -->
+            </div>
+          </div>
+        </div>
+        <!-- start: Footer -->
+        {% include "my_brawl_stats/base_layout_footer.html" %}
+        <!-- end: Footer -->
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

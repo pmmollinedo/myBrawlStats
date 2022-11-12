@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- start: Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="title" content="My Brawl Stats">
+  <meta name="description" content="Get your Brawl Star Game stats automatically stored and updated.">
+  <meta name="keywords" content="Brawler, Brawl, Brawl Stars, Brawl Stars Stats, Brawl Stars API, Django">
+  <meta name="robots" content="noindex, nofollow">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="language" content="English">
+  <meta name="author" content="pmmollinedo">
+  <!-- end: Required meta tags -->
+
+  <!-- start: Page title -->
+  <title>My Brawl Stats</title>
+  <!-- end: Page title -->
+
+  {% load static %}
+  <!-- start: Icons CSS -->
+  <link rel="stylesheet" href="{% static 'vendors/feather/feather.css' %}" type="text/css">
+  <link rel="stylesheet" href="{% static 'vendors/mdi/css/materialdesignicons.min.css' %}" type="text/css">
+  <link rel="stylesheet" href="{% static 'vendors/ti-icons/css/themify-icons.css' %}" type="text/css">
+  <link rel="stylesheet" href="{% static 'vendors/typicons/typicons.css' %}" type="text/css">
+  <link rel="stylesheet" href="{% static 'vendors/simple-line-icons/css/simple-line-icons.css' %}" type="text/css">
+  <!-- start: Icons CSS -->
+
+  <!-- start: Commom CSS -->
+  <link rel="stylesheet" href="{% static 'vendors/css/vendor.bundle.base.css' %}" type="text/css">
+  <!-- end: Commom CSS -->
+
+  <!-- start: CSS for this page -->
+  <link rel="stylesheet" href="{% static 'vendors/datatables.net-bs4/dataTables.bootstrap4.css' %}" type="text/css">
+  <link rel="stylesheet" href="{% static 'js/select.dataTables.min.css' %}" type="text/css">
+  <!-- end:  CSS for this page -->
+
+  <!-- start: other CSS -->
+  <link rel="stylesheet" href="{% static 'css/vertical-layout-light/style.min.css' %}" type="text/css">
+  <!-- start: other CSS -->
+
+  <!-- start: favicon -->
+  <link rel="shortcut icon" href="{% static 'images/favicon.png' %}">
+ <!-- start: favicon -->
+</head>
+
+<body class="sidebar-dark">
+  <!-- start: block base layout -->
+  {% block base_layout %}
+  <p>Base</p>
+  {% endblock %}
+  <!-- end: block base layout -->
+
+  <!-- start: Commom JS -->
+  <script src="{% static 'vendors/js/vendor.bundle.base.js' %}"></script>
+  <!-- end: Commom JS -->
+
+  <!-- start: vendor JS for this page -->
+  <script src="{% static 'vendors/chart.js/Chart.min.js' %}"></script>
+  <script src="{% static 'vendors/bootstrap-datepicker/bootstrap-datepicker.min.js' %}"></script>
+  <script src="{% static 'vendors/progressbar.js/progressbar.min.js' %}"></script>
+  <!-- end: vendor JS for this page -->
+
+  <!-- start: Custom js for this page-->
+  <script src="{% static 'js/jquery.cookie.js' %}"></script>
+  <script src="{% static 'js/dashboard.js' %}"></script>
+  <script src="{% static 'js/Chart.roundedBarCharts.js' %}"></script>
+  <!-- end: custom js for this page-->
+
+  <!-- start: custom JS for this page -->
+  <script src="{% static 'js/off-canvas.js' %}"></script>
+  <script src="{% static 'js/hoverable-collapse.js' %}"></script>
+  <script src="{% static 'js/template.js' %}"></script>
+  <script src="{% static 'js/settings.js' %}"></script>
+  <script src="{% static 'js/todolist.js' %}"></script>
+  <!-- end: custom JS for this page -->
+</body>
+
+</html>
